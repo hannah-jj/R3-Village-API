@@ -1,5 +1,7 @@
-# 3R-Village
+# 3R-Village-API
 A web application utilizies Rails backend for API and React front end with Redux managing state
+
+This repo contains the backend API only.
 
 ## Description
 
