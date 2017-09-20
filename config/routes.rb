@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   resources :ingredients, only: [:index]
   resources :boxes, only: [:index, :show, :create, :update]
 
+# for development purpose
+  scope '/api' do
+    resources :users, only: [:index, :show, :create, :update]
+    resources :items, only: [:index]
+    resources :ingredients, only: [:index]
+    resources :boxes, only: [:index, :show, :create, :update]
+  end
 
   get '*path', to: "application#fallback_index_html", constraints: ->(request) do
   	!request.xhr? && request.format.html?

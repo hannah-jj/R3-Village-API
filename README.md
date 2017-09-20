@@ -16,7 +16,7 @@ No one can truly wins the game because pollution level increases anytime anyone 
 ```
 $ bundle install
 
-$ rails s
+$ rails s -p 3001
 ```
 
 open http://0.0.0.0:3000/ in browser
