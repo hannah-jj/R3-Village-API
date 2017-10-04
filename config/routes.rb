@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     resources :boxes, only: [:index, :show, :create, :update]
   end
 
-  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
-  	!request.xhr? && request.format.html?
-	end
+controller 'api/v1/api' do
+  match '*unmatched_route', :to => 'api/v1/api#route_options', via: [:options]
+end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
